@@ -1,0 +1,28 @@
+repos:
+-   repo: https://github.com/google/yapf
+    rev: v0.32.0
+    hooks:
+    -   id: yapf
+        files: \.py$
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.1.0
+    hooks:
+    -   id: check-merge-conflict
+    -   id: check-symlinks
+    -   id: detect-private-key
+        files: (?!.*paddle)^.*$
+    -   id: end-of-file-fixer
+        files: \.md$
+    -   id: trailing-whitespace
+        files: \.md$
+-   repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.1.14
+    hooks:
+    -   id: forbid-crlf
+        files: \.md$
+    -   id: remove-crlf
+        files: \.md$
+    -   id: forbid-tabs
+        files: \.md$
+    -   id: remove-tabs
+        files: \.md$
